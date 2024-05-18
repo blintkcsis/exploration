@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My HTML5 Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <svg style="position: fixed;">
+            <filter id="pixelate" x="0" y="0">
+                <feFlood x="0.5" y="0.5" height="0.5" width="0.5" />
+        
+                <feComposite width="6" height="6" />
+        
+                <feTile result="a" />
+        
+                <feComposite in="SourceGraphic" in2="a" operator="in" />
+        
+                <feMorphology operator="dilate" radius="2" />
+                
+            </filter>
+        
+        </svg>
+        <svg style="position: fixed;">
+            <filter id="pixelate1" x="0" y="0">
+                <feFlood x="0.6" y="0.6" height="0.6" width="0.6" />
+        
+                <feComposite width="6" height="6" />
+        
+                <feTile result="a" />
+        
+                <feComposite in="SourceGraphic" in2="a" operator="in" />
+        
+                <feMorphology operator="dilate" radius="2" />
+                
+            </filter>
+        
+        </svg>
+        <svg style="position: fixed;">
+            <filter id="pixelate2" x="0" y="0">
+                <feFlood x="0.3" y="0.4" height="0.55" width="0.45" />
+        
+                <feComposite width="6" height="6" />
+        
+                <feTile result="a" />
+        
+                <feComposite in="SourceGraphic" in2="a" operator="in" />
+        
+                <feMorphology operator="dilate" radius="2" />
+                
+            </filter>
+        
+        </svg>
+        <svg style="position: fixed;">
+            <filter id="pixelate3" x="0" y="0">
+                <feFlood x="0.3" y="0.4" height="0.55" width="0.45" />
+        
+                <feComposite width="5" height="5" />
+        
+                <feTile result="a" />
+        
+                <feComposite in="SourceGraphic" in2="a" operator="in" />
+        
+                <feMorphology operator="dilate" radius="1.5" />
+                
+            </filter>
+        
+        </svg>
+        <svg>
+            <defs>
+                <filter id="distort">
+                    <feTurbulence baseFrequency="1" numOctaves="2" result="noise"  />
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="G" yChannelSelector="G">
+                    
+                </filter>
+            </defs>
+        </svg>
+            
+        <svg>
+          <defs>
+            <filter id="displace">
+              <feTurbulence id="turbulence" baseFrequency="1 1" result="turbulence" />
+              <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="10" xChannelSelector="A" yChannelSelector="A"/>
+            </filter>
+          </defs>
+        </svg>
+        
+        
+        <div class="text">
+            <div class="intro">
+                <img style="width: 100%; height: 400px; border-radius: 20px; margin-bottom: 50px; margin-top: 50px; background-image: url('Designer\ \(5\).png'); background-size: cover;" alt="">
+            
+                <h1>Letter to the future</h1>
+                
+                <p>Technology is constantly evolving, and we are on the cusp of a new computing revolution – the era of quantum computing. While classical computers have served us well, they are approaching their limits in terms of processing power and efficiency. Quantum computing promises to revolutionize the way we process information, solve complex problems, and unlock new frontiers in fields like cryptography, materials science, and drug discovery.</p>
+            </div>
+            
+            <p>Quantum computing harnesses the principles of quantum mechanics, a branch of physics that governs the behavior of particles at the atomic and subatomic levels. In classical computing, information is represented and processed using bits, which can exist in one of two states: 0 or 1. However, in quantum computing, information is encoded in quantum bits, or qubits, which can exist in a superposition of both 0 and 1 simultaneously.
+                This superposition principle, along with other quantum phenomena like entanglement and quantum tunneling, allows quantum computers to perform certain calculations exponentially faster than classical computers. While classical computers process information sequentially, quantum computers can evaluate multiple possibilities simultaneously, making them incredibly powerful for specific types of problems.
+            <p>
+                The potential applications of quantum computing are vast and far-reaching. Here are a few examples:
+                Cryptography: Quantum computers could break many of the encryption algorithms used today, necessitating the development of quantum-resistant cryptography. Conversely, they could also enable unbreakable encryption methods, revolutionizing data security.
+                Drug Discovery: By simulating complex molecular interactions, quantum computers could accelerate the process of discovering new drugs and materials, potentially leading to breakthroughs in medicine and materials science.
+                Optimization Problems: Quantum computers excel at solving optimization problems, which have applications in fields like logistics, finance, and transportation, potentially leading to more efficient systems and cost savings.
+                Machine Learning: Quantum algorithms could enhance machine learning capabilities, enabling more accurate predictions and better decision-making in areas like weather forecasting, financial modeling, and pattern recognition.
+                <br> <br>The Challenges Ahead
+                While the potential of quantum computing is immense, there are still significant challenges to overcome. Building a large-scale, fault-tolerant quantum computer is an engineering feat that requires overcoming issues like quantum decoherence (the loss of quantum information due to interactions with the environment) and error correction.
+                Additionally, developing quantum algorithms and software is a complex task that requires a deep understanding of quantum mechanics and computer science. Researchers and developers are working tirelessly to address these challenges and bring quantum computing into the mainstream.
+                <br> <br>The Future of Quantum Computing
+                Despite the challenges, the future of quantum computing is bright. Major tech companies, research institutions, and governments around the world are investing heavily in quantum computing research and development. As the technology matures and becomes more accessible, we can expect to see quantum computers tackling problems that were previously considered intractable, leading to breakthroughs in various fields and potentially reshaping the way we live and work.
+                The quantum revolution is upon us, and it promises to be as transformative as the digital revolution that preceded it. While the journey ahead is filled with challenges, the potential rewards are immense, and the world eagerly awaits the next quantum leap.</p>
+        
+            </p>
+            <p>
+                Written by, <br>
+                Balint
+            </p>
+            <div class="signo">
+                <img src="./signo.png" class="drawing">
+                <svg width="615" height="234" viewBox="0 0 615 234" fill="none" class="cover" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M139.09 17.5C57.5899 82.5 1.58993 157.5 8.58993 166.5C15.5899 175.5 60.0899 156 74.5899 148.5C89.0899 141 113.09 126 131.09 116.5C149.09 107 208.59 78.5 216.59 72.5C224.59 66.5 283.59 31 288.59 32.5C293.59 34 271.59 60.5 231.09 93.5C190.59 126.5 180.59 148 182.09 152.5C183.59 157 207.09 162.5 257.09 131C307.09 99.5 437.59 42.5 438.59 53C439.59 63.5 393.09 105 386.09 113C379.09 121 345.09 152 353.09 160.5C361.09 169 400.59 159 478.59 125C556.59 91 627.59 59.5 536.59 93.5C445.59 127.5 351.09 179.5 292.59 198.5C230.65 218.617 154.59 232 144.09 223C133.59 214 263.59 145.5 288.59 131C313.59 116.5 449.59 54.5 505.59 36C550.39 21.2 591.59 11.1667 606.59 8" stroke="white" stroke-width="16" stroke-linecap="round"/>
+                </svg>
+            </div>
+            
+        </div>
+        <img src="" class="bg" alt="abstract watercolor">
+    </body>
+</html>

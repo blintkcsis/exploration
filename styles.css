@@ -1,0 +1,155 @@
+
+@font-face {
+    font-family: 'AppleGaramond-Light';
+    src: url('./fonts/Apple\ Garamond/AppleGaramond-Light.ttf') format('truetype');
+}
+
+body {
+    font-family: 'AppleGaramond-Light', serif;
+    
+}
+::selection {
+	background-color: #0BA0D1;
+	color: white;
+}
+
+.intro p {
+	font-size: 40px;
+	line-height: 46px;
+}
+
+p {
+	font-size: 30px;
+	line-height: 35px;
+	font-weight: 100;
+}
+
+
+h1 {
+	
+	filter: url(#pixelate);
+	text-align: left;
+	margin: 0;
+	--fsize: clamp(1rem, 30vw, 5rem);
+	--shsize: calc(var(--fsize) * 0.025);
+	--stsize: calc(var(--fsize) * 0.015);
+	font-size: var(--fsize);
+	margin-bottom: 50px;
+	font-weight:100;
+	animation: toggleFilter 4s infinite;
+}
+
+.signo {
+	margin-left: auto;
+	left: auto;
+}
+
+.drawing {
+	width: 200px;
+	position:absolute;
+	z-index: -100;
+}
+
+.cover {
+	position:absolute;
+	vertical-align:middle;
+	margin-left: 12.5px;
+	margin-top: -67px;
+	width: 170px;
+	stroke-dasharray: 2350px;
+	stroke-dashoffset: 4700px;
+	animation: sign 4s cubic-bezier(0.47, 0, 0.745, 0.715) infinite ;
+	
+}
+
+
+h1:before {
+	content: attr(data-text);
+	position: absolute;
+	top:0;
+	left:0;
+	
+	opacity: .5; /* not necessary, just nice to soften the effect :) */
+}
+
+.text {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+	padding: 0 10vw 0 10vw;
+}
+
+
+h1:hover {
+	animation: toggleFilter 1s;
+}
+
+html {
+	--surface: hsl(0, 0%, 100%);
+	--text: hsl(0, 0%, 16%);
+	--hero-h: calc(100vh - 40px);
+	
+	
+	background-size: cover;
+	background-position: center;
+	color: var(--text);
+	background-color: var(--surface);
+	block-size: 100%;
+}
+
+html svg {
+	position: fixed;
+}
+
+.bg{
+	position:absolute;
+	z-index: -1000;
+	top: 0px;
+	width: 99%;
+	height: 99vh;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	filter: opacity(20%) blur(5px) url(#displace) url(#distort) url(#pixelate3) contrast(105%);
+	/*background-image: url('./Designer\ \(5\).png');*/
+	background-size: cover	;
+}
+
+
+@keyframes toggleFilter {
+	0%, 65% {
+	  filter: none;
+	}
+	66%, 80% {
+		filter: url(#pixelate);
+		text-decoration: underlined;/* Example filter: blur */
+	}
+	  81%, 90% {
+	  filter:  url(#pixelate1); /* Example filter: blur */
+		top: -100;
+		left: 2000;
+	}
+	  91%, 100% {
+	  filter: url(#pixelate3); /* Example filter: blur */
+	}
+  }
+
+
+@keyframes distort {
+	0%, 84% {
+		filter: none;
+	}
+	85%, 95% {
+		filter: url(#displace) ;
+	}
+	96%, 100% {
+		filter: url(#distort);
+	}
+}
+
+
+@keyframes sign {
+	
+	20%, 80%{
+		stroke-dashoffset: 2350px;
+	}
+}
