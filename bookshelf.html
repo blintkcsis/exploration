@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bookstyles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Bookshelf</title>
+</head>
+<body class="">
+    <svg style="position: fixed;">
+        <filter id="pixelate" x="0" y="0">
+            <feFlood x="0.5" y="0.5" height="0.5" width="0.5" />
+    
+            <feComposite width="6" height="6" />
+    
+            <feTile result="a" />
+    
+            <feComposite in="SourceGraphic" in2="a" operator="in" />
+    
+            <feMorphology operator="dilate" radius="2" />
+            
+        </filter>
+    
+    </svg>
+    <svg style="position: fixed;">
+        <filter id="pixelate1" x="0" y="0">
+            <feFlood x="0.6" y="0.6" height="0.6" width="0.6" />
+    
+            <feComposite width="6" height="6" />
+    
+            <feTile result="a" />
+    
+            <feComposite in="SourceGraphic" in2="a" operator="in" />
+    
+            <feMorphology operator="dilate" radius="2" />
+            
+        </filter>
+    
+    </svg>
+    <svg style="position: fixed;">
+        <filter id="pixelate2" x="0" y="0">
+            <feFlood x="0.3" y="0.4" height="0.55" width="0.45" />
+    
+            <feComposite width="6" height="6" />
+    
+            <feTile result="a" />
+    
+            <feComposite in="SourceGraphic" in2="a" operator="in" />
+    
+            <feMorphology operator="dilate" radius="2" />
+            
+        </filter>
+    
+    </svg>
+    <svg style="position: fixed;">
+        <filter id="pixelate3" x="0" y="0">
+            <feFlood x="0.3" y="0.4" height="0.55" width="0.45" />
+    
+            <feComposite width="5" height="5" />
+    
+            <feTile result="a" />
+    
+            <feComposite in="SourceGraphic" in2="a" operator="in" />
+    
+            <feMorphology operator="dilate" radius="1.5" />
+            
+        </filter>
+    
+    </svg>
+    <svg>
+        <defs>
+            <filter id="distort">
+                <feTurbulence baseFrequency="1" numOctaves="2" result="noise"  />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="G" yChannelSelector="G">
+                
+            </filter>
+        </defs>
+    </svg>
+        
+    <svg>
+      <defs>
+        <filter id="displace">
+          <feTurbulence id="turbulence" baseFrequency="1 1" result="turbulence" />
+          <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="10" xChannelSelector="A" yChannelSelector="A"/>
+        </filter>
+      </defs>
+    </svg>
+    <h1 style="left: 0;">My bookshelf</h1>
+    <p style="text-align: center;">This is some text that talks about how what this page actually is all about</p>
+       
+    <div class="cupboard">
+            
+         <main class="shelf">
+            
+            <label class="container">
+              <div class="book" id="one">
+                <div class="spine"><span>Poor Chalie's Almanack</span></div>
+                <div></div>
+                <div class="cover"><span></span></div>
+                <div></div>
+                <div class="review">
+                    <h2>Poor Chalie's Almanack by whoever</h2>
+                    <p>This is a review of this book I'm currently reading and took a bit of an effort but quite nice tbh.</p>
+                </div>
+        
+                <input type="radio" name="book" />
+                
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book" id="two">
+                <div class="spine"><span>Book 2</span></div>
+                <div></div>
+                <div class="cover"><span>Book 2</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+                <div class="review">
+                    <h2>Poor Chalie's Almanack by whoever</h2>
+                </div>
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 3</span></div>
+                <div></div>
+                <div><span>Book 3</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 4</span></div>
+                <div></div>
+                <div><span>Book 4</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 5</span></div>
+                <div></div>
+                <div><span>Book 5</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 6</span></div>
+                <div></div>
+                <div><span>Book 6</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 7</span></div>
+                <div></div>
+                <div><span>Book 7</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+                <div class="review" id="seven">
+                    <h2>Poor Chalie's Almanack by whoever</h2>
+                </div>
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 8</span></div>
+                <div></div>
+                <div><span>Book 8</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 9</span></div>
+                <div></div>
+                <div><span>Book 9</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 10</span></div>
+                <div></div>
+                <div><span>Book 10</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 11</span></div>
+                <div></div>
+                <div><span>Book 11</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+        
+            <label class="container">
+              <div class="book">
+                <div><span>Book 12</span></div>
+                <div></div>
+                <div><span>Book 12</span></div>
+                <div></div>
+        
+                <input type="radio" name="book" />
+              </div>
+            </label>
+          </main>
+    </div>
+    
+  </body>
+</html>
